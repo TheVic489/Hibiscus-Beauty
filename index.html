@@ -1,81 +1,650 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Hibiscus Beauty</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hibiscus Beauty – Centre d'estètica integral i benestar. Tractaments facials, corporals, massatges relaxants i maquillatge professional a Barcelona.">
+  <meta name="keywords" content="estètica, bellesa, tractaments facials, massatges, benestar, spa, maquillatge, drenatge limfàtic, aromaterapia, Barcelona">
+  <meta name="author" content="Hibiscus Beauty">
+  <meta property="og:title" content="Hibiscus Beauty – Estètica integral i benestar">
+  <meta property="og:description" content="Centre d'estètica integral i benestar. Tractaments personals, massatges i maquillatge professional.">
+  <meta property="og:type" content="website">
+  <title>Hibiscus Beauty – Estètica integral i benestar</title>
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Patua+One|Lato:300,400,700">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">Hibiscus Beauty</div>
-      <nav class="main-nav">
-        <a href="#treatments">Treatments</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inici" class="nav-logo">
+        <span class="logo-flower">✿</span>
+        Hibiscus Beauty
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Obrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#inici" class="nav-link">Inici</a></li>
+        <li><a href="#serveis" class="nav-link">Serveis</a></li>
+        <li><a href="#qui-som" class="nav-link">Qui Som</a></li>
+        <li><a href="#filosofia" class="nav-link">Filosofia</a></li>
+        <li><a href="#contacte" class="nav-link">Contacte</a></li>
+        <li><a href="#contacte" class="btn btn-primary btn-sm">Reserva Cita</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner container">
-      <h1>THE BEAUTY OF NATURE</h1>
-      <p>Organic-inspired treatments for balance and well-being.</p>
-    </div>
-  </section>
+  <main>
 
-  <main class="container content">
-    <section class="features">
-      <div class="feature">
-        <img src="images/placeholder1.png" alt="beauty">
-        <h3>Beauty</h3>
-        <p>Radiant skin starts with health.</p>
-      </div>
-      <div class="feature">
-        <img src="images/placeholder2.png" alt="health">
-        <h3>Health</h3>
-        <p>Balance and vitality for everyday life.</p>
-      </div>
-      <div class="feature">
-        <img src="images/placeholder3.png" alt="balance">
-        <h3>Balance</h3>
-        <p>Harmony of body and mind.</p>
-      </div>
-    </section>
-
-    <section id="treatments" class="treatments">
-      <div class="treatment-item">
-        <img src="images/treatments.png" alt="body treatments">
-        <div class="treatment-content">
-          <h2>BODY TREATMENTS</h2>
-          <p>Personalized body treatments combining manual therapy, modern equipment and organic products.</p>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inici" aria-label="Secció principal">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-badge animate-hero">Benvinguda</span>
+        <h1 class="hero-title animate-hero">Hibiscus Beauty</h1>
+        <p class="hero-subtitle animate-hero">Estètica integral i benestar</p>
+        <p class="hero-desc animate-hero">Descobreix una experiència única on la bellesa i el benestar es fusionen per oferir-te el millor de tu mateixa.</p>
+        <div class="hero-actions animate-hero">
+          <a href="#contacte" class="btn btn-primary">Reserva la teva cita</a>
+          <a href="#serveis" class="btn btn-ghost">Descobreix els serveis</a>
         </div>
       </div>
+      <a href="#serveis" class="hero-scroll" aria-label="Desplaça't cap avall">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </section>
 
-      <div class="treatment-item reverse">
-        <div class="treatment-content">
-          <h2>FACIAL TREATMENTS</h2>
-          <p>Deep care for all skin types: clean, nourish and restore elasticity.</p>
+    <!-- ===================== SERVICES SUMMARY ===================== -->
+    <section class="services-highlights" aria-labelledby="services-highlights-title">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <span class="section-tag">El Nostre Treball</span>
+          <h2 class="section-title" id="services-highlights-title">Els Nostres Serveis</h2>
+          <p class="section-subtitle">Tractaments personalitzats per a cada tipus de pell i necessitat</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card animate-on-scroll">
+            <div class="service-icon" aria-hidden="true"><i class="fas fa-spa"></i></div>
+            <h3>Tractaments Facials</h3>
+            <p>Cures profundes per a tots els tipus de pell: neteja, nutrició i restauració de l'elasticitat amb protocols avançats.</p>
+            <a href="#serveis" class="service-link">Descobreix més <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card animate-on-scroll">
+            <div class="service-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div>
+            <h3>Tractaments Corporals</h3>
+            <p>Tractaments que combinen teràpia manual, aparatologia moderna i productes naturals per a resultats visibles.</p>
+            <a href="#serveis" class="service-link">Descobreix més <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card animate-on-scroll">
+            <div class="service-icon" aria-hidden="true"><i class="fas fa-hands"></i></div>
+            <h3>Massatges</h3>
+            <p>Massatges terapèutics i relaxants per alliberar tensions i restaurar l'equilibri del cos i la ment.</p>
+            <a href="#serveis" class="service-link">Descobreix més <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-card animate-on-scroll">
+            <div class="service-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
+            <h3>Maquillatge</h3>
+            <p>Maquillatge professional per a qualsevol ocasió, realçant la teva bellesa natural amb tècniques modernes.</p>
+            <a href="#serveis" class="service-link">Descobreix més <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
         </div>
-        <img src="images/treatments2.png" alt="facial treatments">
       </div>
     </section>
 
-    <section id="about" class="about">
-      <h2>ABOUT HIBISCUS BEAUTY</h2>
-      <p>Design-first, organic-inspired spa experiences. This is a design-only clone for layout, colors and fonts.</p>
+    <!-- ===================== ABOUT PREVIEW ===================== -->
+    <section class="about-preview" aria-labelledby="about-preview-title">
+      <div class="container">
+        <div class="about-preview-inner">
+          <div class="about-preview-image animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80"
+                 alt="Interior del centre d'estètica Hibiscus Beauty" loading="lazy">
+            <div class="about-preview-badge" aria-hidden="true">
+              <span class="badge-number">3+</span>
+              <span class="badge-text">Professionals<br>especialitzades</span>
+            </div>
+          </div>
+          <div class="about-preview-content animate-on-scroll">
+            <span class="section-tag">Qui Som</span>
+            <h2 class="section-title" id="about-preview-title">Un Equip Dedicat al Teu Benestar</h2>
+            <p>A Hibiscus Beauty som un equip de professionals especialitzades en estètica integral i benestar. La nostra passió és acompanyar-te en el teu camí cap a la millor versió de tu mateixa.</p>
+            <p>Cada tractament és personalitzat, dissenyat específicament per a les teves necessitats i objectius.</p>
+            <ul class="about-features" aria-label="Les nostres garanties">
+              <li class="about-feature">
+                <i class="fas fa-circle-check" aria-hidden="true"></i>
+                <span>Professionals titulades</span>
+              </li>
+              <li class="about-feature">
+                <i class="fas fa-circle-check" aria-hidden="true"></i>
+                <span>Productes d'alta qualitat</span>
+              </li>
+              <li class="about-feature">
+                <i class="fas fa-circle-check" aria-hidden="true"></i>
+                <span>Tractaments personalitzats</span>
+              </li>
+              <li class="about-feature">
+                <i class="fas fa-circle-check" aria-hidden="true"></i>
+                <span>Ambient relaxant i acollidor</span>
+              </li>
+            </ul>
+            <a href="#qui-som" class="btn btn-secondary">Coneix l'equip</a>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- ===================== FULL SERVICES ===================== -->
+    <section class="services-full" id="serveis" aria-labelledby="serveis-title">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <span class="section-tag">Especialitats</span>
+          <h2 class="section-title" id="serveis-title">Els Nostres Tractaments</h2>
+          <p class="section-subtitle">Cada servei és una experiència dissenyada per a tu</p>
+        </header>
+
+        <div class="services-detail">
+
+          <article class="service-detail-card animate-on-scroll">
+            <div class="service-detail-image">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80"
+                   alt="Tractament facial professional" loading="lazy">
+              <div class="service-detail-overlay" aria-hidden="true"><i class="fas fa-spa"></i></div>
+            </div>
+            <div class="service-detail-content">
+              <h3>Tractaments Facials</h3>
+              <p>Protocols personalitzats per a cada tipus de pell, amb tècniques avançades i productes d'alta qualitat per a resultats visibles des de la primera sessió.</p>
+              <ul class="service-list">
+                <li>Neteja facial profunda</li>
+                <li>Hidratació i nutrició intensiva</li>
+                <li>Tractament antienvelliment</li>
+                <li>Tractament específic per a l'acné</li>
+                <li>Peeling i exfoliació</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-detail-card animate-on-scroll">
+            <div class="service-detail-image">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=700&q=80"
+                   alt="Tractament corporal professional" loading="lazy">
+              <div class="service-detail-overlay" aria-hidden="true"><i class="fas fa-leaf"></i></div>
+            </div>
+            <div class="service-detail-content">
+              <h3>Tractaments Corporals</h3>
+              <p>Tractaments integrals per al cos que combinen aparatologia d'última generació amb tècniques manuals per a resultats òptims i duradors.</p>
+              <ul class="service-list">
+                <li>Reducció de cel·lulitis</li>
+                <li>Modelat i tonificació corporal</li>
+                <li>Drenatge limfàtic</li>
+                <li>Tractament reafirmant</li>
+                <li>Envoltaments corporals</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-detail-card animate-on-scroll">
+            <div class="service-detail-image">
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=700&q=80"
+                   alt="Massatge terapèutic i relaxant" loading="lazy">
+              <div class="service-detail-overlay" aria-hidden="true"><i class="fas fa-hands"></i></div>
+            </div>
+            <div class="service-detail-content">
+              <h3>Massatges</h3>
+              <p>Massatges terapèutics i de benestar per alliberar la tensió muscular, millorar la circulació i promoure la relaxació profunda del cos i la ment.</p>
+              <ul class="service-list">
+                <li>Massatge relaxant</li>
+                <li>Massatge amb aromaterapia</li>
+                <li>Drenatge limfàtic manual</li>
+                <li>Massatge terapèutic</li>
+                <li>Massatge amb pedres calentes</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-detail-card animate-on-scroll">
+            <div class="service-detail-image">
+              <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=80"
+                   alt="Maquillatge professional" loading="lazy">
+              <div class="service-detail-overlay" aria-hidden="true"><i class="fas fa-palette"></i></div>
+            </div>
+            <div class="service-detail-content">
+              <h3>Maquillatge</h3>
+              <p>Maquillatge professional per a qualsevol ocasió especial, realçant la teva bellesa natural amb tècniques modernes i productes premium.</p>
+              <ul class="service-list">
+                <li>Maquillatge de núvia</li>
+                <li>Maquillatge d'esdeveniments</li>
+                <li>Maquillatge natural i quotidià</li>
+                <li>Assessorament de color personal</li>
+                <li>Classes de maquillatge</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="services-cta animate-on-scroll">
+          <a href="#contacte" class="btn btn-primary">Reserva el teu tractament</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUI SOM ===================== -->
+    <section class="team-section" id="qui-som" aria-labelledby="qui-som-title">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <span class="section-tag">L'Equip</span>
+          <h2 class="section-title" id="qui-som-title">Qui Som</h2>
+          <p class="section-subtitle">Som un equip de professionals especialitzades en estètica integral i benestar, amb la missió d'oferir-te tractaments d'alta qualitat en un ambient de confiança.</p>
+        </header>
+
+        <div class="team-grid">
+
+          <article class="team-card animate-on-scroll">
+            <div class="team-card-image">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrat professional d'Alba Barboteo" loading="lazy">
+              <div class="team-card-overlay" aria-hidden="true">
+                <a href="#" aria-label="Instagram d'Alba Barboteo"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <h3>Alba Barboteo</h3>
+              <p class="team-role">Tècnica Superior en Estètica Integral i Benestar</p>
+              <p class="team-desc">Especialitzada en drenatge limfàtic, tractaments amb aromaterapia, massatges relaxants i tractaments amb aparatologia.</p>
+              <div class="team-tags" aria-label="Especialitats">
+                <span>Drenatge Limfàtic</span>
+                <span>Aromaterapia</span>
+                <span>Aparatologia</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card animate-on-scroll">
+            <div class="team-card-image">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrat professional de Samantha Honores" loading="lazy">
+              <div class="team-card-overlay" aria-hidden="true">
+                <a href="#" aria-label="Instagram de Samantha Honores"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <h3>Samantha Honores</h3>
+              <p class="team-role">Especialista en Tractaments Facials</p>
+              <p class="team-desc">Especialitzada en tractaments facials, cura de la pell i protocols personalitzats segons el tipus de pell.</p>
+              <div class="team-tags" aria-label="Especialitats">
+                <span>Tractaments Facials</span>
+                <span>Cura de la Pell</span>
+                <span>Protocols</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card animate-on-scroll">
+            <div class="team-card-image">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+                   alt="Retrat professional d'Iris Mª Álvaro" loading="lazy">
+              <div class="team-card-overlay" aria-hidden="true">
+                <a href="#" aria-label="Instagram d'Iris Mª Álvaro"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="team-card-info">
+              <h3>Iris M.ª Álvaro</h3>
+              <p class="team-role">Especialista en Maquillatge i Benestar</p>
+              <p class="team-desc">Especialitzada en maquillatge professional, tractaments corporals i tècniques de benestar.</p>
+              <div class="team-tags" aria-label="Especialitats">
+                <span>Maquillatge</span>
+                <span>Tractaments Corporals</span>
+                <span>Benestar</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FILOSOFIA ===================== -->
+    <section class="philosophy" id="filosofia" aria-labelledby="filosofia-title">
+      <div class="philosophy-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="philosophy-inner">
+          <div class="philosophy-text animate-on-scroll">
+            <span class="section-tag section-tag--light">La Nostra Filosofia</span>
+            <h2 class="section-title section-title--light" id="filosofia-title">Com Ho Fem</h2>
+            <p>La nostra filosofia es basa en combinar la innovació tecnològica amb tècniques manuals per oferir resultats excepcionals. Creiem en un enfocament holístic de la bellesa i el benestar.</p>
+            <p>No tractem únicament la superfície; anem més a fons per entendre les necessitats úniques de cada persona i crear un pla de tractament personalitzat que aborda tant el benestar emocional com el físic.</p>
+          </div>
+          <div class="philosophy-values animate-on-scroll">
+            <div class="value-card">
+              <div class="value-icon" aria-hidden="true"><i class="fas fa-heart"></i></div>
+              <h4>Enfocament Holístic</h4>
+              <p>Cuidem el cos, la ment i l'esperit com un tot integrat per al teu benestar complet.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" aria-hidden="true"><i class="fas fa-microscope"></i></div>
+              <h4>Innovació Tecnològica</h4>
+              <p>Fem servir aparatologia d'última generació per oferir resultats efectius i duradors.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
+              <h4>Ingredients Naturals</h4>
+              <p>Prioritzem productes naturals i orgànics respectuosos amb la teva pell i el medi ambient.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon" aria-hidden="true"><i class="fas fa-circle-check"></i></div>
+              <h4>Personalització Total</h4>
+              <p>Cada tractament és dissenyat específicament per a les teves necessitats i objectius individuals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PÚBLIC OBJECTIU ===================== -->
+    <section class="audience" id="public-objectiu" aria-labelledby="public-title">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <span class="section-tag">Per a Qui?</span>
+          <h2 class="section-title" id="public-title">Els Nostres Serveis Estan Pensats per a Tu</h2>
+          <p class="section-subtitle">A Hibiscus Beauty atenem totes les dones que valoren la seva cura personal i el seu benestar</p>
+        </header>
+
+        <div class="audience-grid">
+          <div class="audience-card animate-on-scroll">
+            <div class="audience-icon" aria-hidden="true"><i class="fas fa-face-smile"></i></div>
+            <h4>Dones de 18 a 50 anys</h4>
+            <p>Atenem totes les etapes de la vida femenina, amb tractaments adaptats a cada edat i necessitat específica.</p>
+          </div>
+          <div class="audience-card animate-on-scroll">
+            <div class="audience-icon" aria-hidden="true"><i class="fas fa-gem"></i></div>
+            <h4>Cura Personal</h4>
+            <p>Per a qui busca moments de qualitat per cuidar-se i sentir-se bé com a ritual de benestar diari.</p>
+          </div>
+          <div class="audience-card animate-on-scroll">
+            <div class="audience-icon" aria-hidden="true"><i class="fas fa-heart"></i></div>
+            <h4>Problemes de Pell</h4>
+            <p>Tractaments específics per a l'acné, taques, pell seca, sensible o amb necessitats especials.</p>
+          </div>
+          <div class="audience-card animate-on-scroll">
+            <div class="audience-icon" aria-hidden="true"><i class="fas fa-spa"></i></div>
+            <h4>Relaxació i Benestar</h4>
+            <p>Per a qui busca desconnectar del dia a dia i recuperar l'energia i l'equilibri interior.</p>
+          </div>
+          <div class="audience-card animate-on-scroll">
+            <div class="audience-icon" aria-hidden="true"><i class="fas fa-person"></i></div>
+            <h4>Cel·lulitis i Cos</h4>
+            <p>Tractaments corporals efectius per millorar la textura de la pell i la silueta de manera visible.</p>
+          </div>
+          <div class="audience-card animate-on-scroll">
+            <div class="audience-icon" aria-hidden="true"><i class="fas fa-hands"></i></div>
+            <h4>Tensió Muscular</h4>
+            <p>Massatges terapèutics per alliberar la tensió, millorar la postura i recuperar la mobilitat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <span class="section-tag">Testimonis</span>
+          <h2 class="section-title" id="testimonials-title">El Que Diuen les Nostres Clientes</h2>
+        </header>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card animate-on-scroll">
+            <div class="testimonial-quote" aria-hidden="true"><i class="fas fa-quote-left"></i></div>
+            <p>"Vaig venir per primera vegada amb molta desconfiança, però l'equip de Hibiscus Beauty em va fer sentir còmoda des del primer moment. El tractament facial va transformar la meva pell completament."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">M</div>
+              <div>
+                <strong>Maria G.</strong>
+                <span>Tractament facial antienvelliment</span>
+              </div>
+            </footer>
+            <div class="testimonial-stars" aria-label="Valoració: 5 estrelles">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+          </blockquote>
+
+          <blockquote class="testimonial-card animate-on-scroll">
+            <div class="testimonial-quote" aria-hidden="true"><i class="fas fa-quote-left"></i></div>
+            <p>"Els massatges d'Alba són increïbles. M'ha ajudat molt amb els meus problemes de tensió cervical. Ara vinc regularment i noto una millora enorme en el meu benestar general."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">L</div>
+              <div>
+                <strong>Laura P.</strong>
+                <span>Massatge terapèutic</span>
+              </div>
+            </footer>
+            <div class="testimonial-stars" aria-label="Valoració: 5 estrelles">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+          </blockquote>
+
+          <blockquote class="testimonial-card animate-on-scroll">
+            <div class="testimonial-quote" aria-hidden="true"><i class="fas fa-quote-left"></i></div>
+            <p>"La Samantha és una experta en la pell. Va analitzar el meu tipus de pell i em va recomanar un protocol personalitzat que ha fet meravelles. Ara tinc la pell que sempre havia volgut."</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">C</div>
+              <div>
+                <strong>Carla R.</strong>
+                <span>Protocol personalitzat de pell</span>
+              </div>
+            </footer>
+            <div class="testimonial-stars" aria-label="Valoració: 5 estrelles">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTE ===================== -->
+    <section class="contact" id="contacte" aria-labelledby="contacte-title">
+      <div class="container">
+        <header class="section-header animate-on-scroll">
+          <span class="section-tag">Contacte</span>
+          <h2 class="section-title" id="contacte-title">Reserva la Teva Cita</h2>
+          <p class="section-subtitle">Posa't en contacte amb nosaltres i et respondrem el més aviat possible</p>
+        </header>
+
+        <div class="contact-inner">
+          <div class="contact-form-wrapper animate-on-scroll">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Formulari de reserva de cita">
+              <div class="form-group">
+                <label for="name">Nom complet <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="El teu nom" required autocomplete="name">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Correu electrònic <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="correu@exemple.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Telèfon</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" autocomplete="tel">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Servei d'interès</label>
+                <select id="service" name="service">
+                  <option value="">Selecciona un servei</option>
+                  <option value="facial">Tractament facial</option>
+                  <option value="corporal">Tractament corporal</option>
+                  <option value="massage">Massatge</option>
+                  <option value="makeup">Maquillatge</option>
+                  <option value="other">Altra consulta</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Missatge <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="4" placeholder="Explica'ns les teves necessitats o preferències..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar sol·licitud
+              </button>
+              <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+                <i class="fas fa-circle-check" aria-hidden="true"></i> Gràcies! Ens posarem en contacte amb tu aviat.
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info animate-on-scroll">
+            <div class="contact-info-card">
+              <h3>Informació de Contacte</h3>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <strong>Adreça</strong>
+                  <address>Carrer de l'Estètica, 42<br>08000 Barcelona, Catalunya</address>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong>Telèfon</strong>
+                  <p><a href="tel:+34600000000">+34 600 000 000</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Correu electrònic</strong>
+                  <p><a href="mailto:info@hibiscusbeauty.com">info@hibiscusbeauty.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+                <div>
+                  <strong>Horari</strong>
+                  <p>Dl – Dv: 9:00 – 20:00<br>Ds: 9:00 – 14:00</p>
+                </div>
+              </div>
+
+              <a href="https://wa.me/34600000000" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i> Xateja per WhatsApp
+              </a>
+            </div>
+
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23966.117258906977!2d2.1482804!3d41.3850639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a285bfbfffff%3A0xcf1d488bdc20e8b0!2sBarcelona!5e0!3m2!1sca!2ses!4v1700000000000"
+                width="100%"
+                height="240"
+                style="border:0;border-radius:12px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicació de Hibiscus Beauty a Barcelona">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
     <div class="container">
-      <p>&copy; Hibiscus Beauty</p>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#inici" class="footer-logo">
+            <span class="logo-flower">✿</span> Hibiscus Beauty
+          </a>
+          <p>Estètica integral i benestar. Cuidem la teva bellesa interior i exterior amb professionalitat i dedicació.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Segueix-nos a Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Segueix-nos a Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" aria-label="Contacta'ns per WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <nav class="footer-links" aria-label="Navegació del peu de pàgina">
+          <h4>Navegació</h4>
+          <ul>
+            <li><a href="#inici">Inici</a></li>
+            <li><a href="#serveis">Serveis</a></li>
+            <li><a href="#qui-som">Qui Som</a></li>
+            <li><a href="#filosofia">Filosofia</a></li>
+            <li><a href="#contacte">Contacte</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-links" aria-label="Serveis del peu de pàgina">
+          <h4>Serveis</h4>
+          <ul>
+            <li><a href="#serveis">Tractaments Facials</a></li>
+            <li><a href="#serveis">Tractaments Corporals</a></li>
+            <li><a href="#serveis">Massatges</a></li>
+            <li><a href="#serveis">Maquillatge</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact-info">
+          <h4>Contacte Ràpid</h4>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +34 600 000 000</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> info@hibiscusbeauty.com</p>
+          <p><i class="fas fa-clock" aria-hidden="true"></i> Dl–Dv: 9:00–20:00</p>
+          <a href="#contacte" class="btn btn-primary btn-sm">Reserva Cita</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hibiscus Beauty. Tots els drets reservats.</p>
+        <p>Fet amb <i class="fas fa-heart" aria-hidden="true" style="color:#e8afc0"></i> per al teu benestar</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/34600000000"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contacta'ns per WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Torna a dalt" hidden>
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
