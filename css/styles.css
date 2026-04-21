@@ -1,0 +1,31 @@
+/* Hibiscus Beauty - design-only clone styles */
+:root{
+  --bg:#f8f7f5;
+  --accent:#6b5639;
+  --text:#2b2b2b;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Lato',Roboto,Arial, sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.site-header{background:#fff;border-bottom:1px solid #eee}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-family:'Patua One',serif;font-size:26px;color:var(--accent)}
+.main-nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:600}
+.hero{background-image:url('../images/home.jpg');background-size:cover;background-position:center;padding:110px 0;color:#fff;text-align:center}
+.hero-inner h1{font-family:'Patua One',serif;font-size:42px;margin:0 0 10px}
+.hero-inner p{max-width:780px;margin:0 auto;font-size:18px}
+.content{padding:60px 0}
+.features{display:flex;gap:24px;justify-content:space-between;margin-bottom:40px}
+.feature{flex:1;background:#fff;padding:24px;border-radius:6px;text-align:center}
+.feature img{max-width:120px;margin-bottom:16px}
+.treatments .treatment-item{display:flex;align-items:center;gap:24px;margin-bottom:40px}
+.treatment-item img{width:48%;border-radius:6px}
+.treatment-item .treatment-content{width:52%}
+.treatment-item.reverse{flex-direction:row-reverse}
+.about{background:var(--accent);color:#fff;padding:40px;border-radius:6px}
+.site-footer{padding:20px 0;text-align:center}
+@media (max-width:800px){
+  .features{flex-direction:column}
+  .treatment-item{flex-direction:column}
+  .treatment-item img,.treatment-item .treatment-content{width:100%}
+}
