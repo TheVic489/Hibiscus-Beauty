@@ -175,6 +175,9 @@
                 <li>Tractament específic per a l'acné</li>
                 <li>Peeling i exfoliació</li>
               </ul>
+              <button class="btn-protocol" data-protocol="facials" aria-haspopup="dialog">
+                <i class="fas fa-scroll" aria-hidden="true"></i> Veure Protocols
+              </button>
             </div>
           </article>
 
@@ -194,6 +197,9 @@
                 <li>Tractament reafirmant</li>
                 <li>Envoltaments corporals</li>
               </ul>
+              <button class="btn-protocol" data-protocol="corporals" aria-haspopup="dialog">
+                <i class="fas fa-scroll" aria-hidden="true"></i> Veure Protocols
+              </button>
             </div>
           </article>
 
@@ -256,7 +262,7 @@
 
           <article class="team-card animate-on-scroll">
             <div class="team-card-image">
-              <img src="/images/alba.png"
+              <img src="images/alba.png"
                    alt="Retrat professional d'Alba Barboteo" loading="lazy">
               <div class="team-card-overlay" aria-hidden="true">
                 <a href="#" aria-label="Instagram d'Alba Barboteo"><i class="fab "></i></a>
@@ -276,7 +282,7 @@
 
           <article class="team-card animate-on-scroll">
             <div class="team-card-image">
-              <img src="/images/sami.png"
+              <img src="images/sami.png"
                    alt="Retrat professional de Samantha Honores" loading="lazy">
               <div class="team-card-overlay" aria-hidden="true">
                 <a href="#" aria-label="Instagram de Samantha Honores"><i class="fab "></i></a>
@@ -296,7 +302,7 @@
 
           <article class="team-card animate-on-scroll">
             <div class="team-card-image">
-              <img src="/images/iris.png"
+              <img src="images/iris.png"
                    alt="Retrat professional d'Iris Mª Álvaro" loading="lazy">
               <div class="team-card-overlay" aria-hidden="true">
                 <a href="#" aria-label="Instagram d'Iris Mª Álvaro"><i class="fab "></i></a>
@@ -577,6 +583,712 @@
     </section>
 
   </main>
+
+  <!-- ===================== PROTOCOL MODAL ===================== -->
+  <div class="protocol-modal" id="protocolModal" role="dialog" aria-modal="true" aria-labelledby="protocolModalTitle" hidden>
+    <div class="protocol-modal-backdrop" id="protocolModalBackdrop"></div>
+    <div class="protocol-modal-container">
+
+      <button class="protocol-modal-close" id="protocolModalClose" aria-label="Tancar protocols">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <!-- FACIALS -->
+      <div class="protocol-panel" id="panelFacials" hidden>
+        <div class="protocol-modal-header">
+          <span class="protocol-category-badge"><i class="fas fa-spa" aria-hidden="true"></i> Tractaments Facials</span>
+          <h2 class="protocol-modal-title" id="protocolModalTitle">Protocols de Tractaments Facials</h2>
+          <p>Cada protocol s'ha dissenyat de forma rigorosa per garantir els millors resultats per a cada tipus de pell.</p>
+        </div>
+
+        <!-- Tab Nav -->
+        <div class="protocol-tabs" role="tablist" aria-label="Protocols facials">
+          <button class="protocol-tab active" role="tab" aria-selected="true" aria-controls="tabPellSeca" id="tabBtnPellSeca">
+            <i class="fas fa-droplet" aria-hidden="true"></i> Pell Seca
+          </button>
+          <button class="protocol-tab" role="tab" aria-selected="false" aria-controls="tabEnvelliment" id="tabBtnEnvelliment">
+            <i class="fas fa-hourglass-half" aria-hidden="true"></i> Envelliment
+          </button>
+          <button class="protocol-tab" role="tab" aria-selected="false" aria-controls="tabPigmentacio" id="tabBtnPigmentacio">
+            <i class="fas fa-circle-half-stroke" aria-hidden="true"></i> Pigmentació
+          </button>
+        </div>
+
+        <!-- Tab: Pell Seca -->
+        <div class="protocol-tab-content active" id="tabPellSeca" role="tabpanel" aria-labelledby="tabBtnPellSeca">
+          <div class="protocol-intro-grid">
+            <div class="protocol-need-box">
+              <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Objectius del tractament</h4>
+              <ul>
+                <li>Hidratació profunda i nutrició de la barrera cutània</li>
+                <li>Millorar elasticitat i confort</li>
+                <li>Calmar l'enrogiment i aportar lluminositat</li>
+                <li>Prevenir línies d'expressió</li>
+              </ul>
+            </div>
+            <div class="protocol-skin-box">
+              <h4><i class="fas fa-magnifying-glass" aria-hidden="true"></i> Tipus de pell</h4>
+              <p>Tibantor, poca flexibilitat, porus tancats, sense lluminositat, possible enrogiment, inicis de línies d'expressió.</p>
+            </div>
+          </div>
+
+          <div class="protocol-steps">
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 1 · Preparació</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <strong>Desmaquillat</strong>
+                    <p>Llet o oli vegetal (mantega de karité, jojoba o argà). Neteja suau respectant la barrera lipídica.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <strong>Hidrolat</strong>
+                    <p>Aigua de roses i glicerina per equilibrar el pH i eliminar restes de cèl·lules mortes.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <strong>Peeling</strong>
+                    <p>Urea (hidratant + queratolítica suau) + enzims de papaia. Afavoreix la penetració dels actius i elimina cèl·lules mortes.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <strong>Tonificació</strong>
+                    <p>Hidrolat de roses per finalitzar la preparació i secar l'excés d'humitat.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 2 · Tractament</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">5</div>
+                  <div class="step-body">
+                    <strong>Vapor d'ozó + Extracció</strong>
+                    <p>Extracció de comedons assistida amb vapor d'ozó per ablanir el porus.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">6</div>
+                  <div class="step-body">
+                    <strong>Alta Freqüència</strong>
+                    <p>Tanca el porus, cicatritza i actua com a bactericida. S'aplica tònic equalitzador de pH abans i després.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">7</div>
+                  <div class="step-body">
+                    <strong>Llum LED Vermell + Groc</strong>
+                    <p>Vermell: hidratació i regeneració. Groc: calma la pell i redueix sensació de tibantor.</p>
+                    <span class="step-tag"><i class="fas fa-bolt" aria-hidden="true"></i> Aparatologia</span>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">8</div>
+                  <div class="step-body">
+                    <strong>Sèrum Hidratant</strong>
+                    <p>Pèptids + Àcid hialurònic. S'aplica sobre pell preparada per màxima absorció.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 3 · Finalització</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">9</div>
+                  <div class="step-body">
+                    <strong>Mascareta Alginat</strong>
+                    <p>Col·lagen i Àcid hialurònic. Efecte intensiu hidratant i calmant.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">10</div>
+                  <div class="step-body">
+                    <strong>Crema Nutritiva</strong>
+                    <p>Escualà i pèptids per reparar, nodrir i mantenir els resultats.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">11</div>
+                  <div class="step-body">
+                    <strong>Protector Solar SPF 50+</strong>
+                    <p>Textura crema hidratant amb Àcid hialurònic i Vitamina E. Imprescindible.</p>
+                    <span class="step-tag step-tag--alert"><i class="fas fa-sun" aria-hidden="true"></i> Imprescindible</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-info-row">
+            <div class="protocol-sessions-card">
+              <i class="fas fa-calendar-days" aria-hidden="true"></i>
+              <div>
+                <strong>Sessions recomanades</strong>
+                <p>1 sessió cada 3–4 setmanes. Deshidratació severa: 1 sessió cada 2 setmanes inicialment.</p>
+              </div>
+            </div>
+            <div class="protocol-tips-card">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <div>
+                <strong>Cures a casa</strong>
+                <ul>
+                  <li>Hidratar diàriament amb crema rica en ceràmides o àcid hialurònic</li>
+                  <li>Evitar sabons forts i productes amb alcohol</li>
+                  <li>Aplicar SPF 30+ cada dia</li>
+                  <li>Mascaretes hidratants 1–2 cops per setmana</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Envelliment -->
+        <div class="protocol-tab-content" id="tabEnvelliment" role="tabpanel" aria-labelledby="tabBtnEnvelliment" hidden>
+          <div class="protocol-intro-grid">
+            <div class="protocol-need-box">
+              <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Objectius del tractament</h4>
+              <ul>
+                <li>Estimular la síntesi de col·lagen i elastina</li>
+                <li>Millorar fermesa i elasticitat</li>
+                <li>Hidratar en profunditat i reduir arrugues</li>
+                <li>Protegir front radicals lliures i radiació UV</li>
+              </ul>
+            </div>
+            <div class="protocol-skin-box">
+              <h4><i class="fas fa-magnifying-glass" aria-hidden="true"></i> Tipus de pell</h4>
+              <p>Pell madura amb arrugues i línies fines, pèrdua de fermesa, pell apagada, deshidratació, to desigual i regeneració cel·lular disminuïda.</p>
+            </div>
+          </div>
+
+          <div class="protocol-steps">
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 1 · Preparació</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <strong>Desmaquillat</strong>
+                    <p>Textura d'oli amb Vitamina E i Pantenol. Nodreix mentres neteja.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <strong>Hidrolat d'Aigua de Roses</strong>
+                    <p>Hidrata, calma i prepara la pell per als actius del tractament.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <strong>Exfoliant Químic</strong>
+                    <p>Àcid làctic + àcid glicòlic. Estimula la renovació cel·lular i millora la textura.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <strong>Llum LED Vermell + Groc</strong>
+                    <p>Vermell: estimula col·lagen i elastina. Groc: millora circulació i lluminositat.</p>
+                    <span class="step-tag"><i class="fas fa-bolt" aria-hidden="true"></i> Aparatologia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 2 · Tractament</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">5</div>
+                  <div class="step-body">
+                    <strong>INDIBA</strong>
+                    <p>Estimula el metabolisme cel·lular, augmenta la producció de col·lagen i elastina, redueix arrugues, activa la circulació. Pell més densa i elàstica.</p>
+                    <span class="step-tag"><i class="fas fa-bolt" aria-hidden="true"></i> Aparatologia</span>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">6</div>
+                  <div class="step-body">
+                    <strong>Sèrum Antiedat</strong>
+                    <p>Retinol + pèptids. Tractament principal antiedat per a pell preparada.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">7</div>
+                  <div class="step-body">
+                    <strong>Massatge Facial 20 min</strong>
+                    <p>Activa la circulació sanguínia, produeix col·lagen, augmenta fermesa i elasticitat, relaxa la musculatura.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 3 · Finalització</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">8</div>
+                  <div class="step-body">
+                    <strong>Mascareta Algina</strong>
+                    <p>Àcid hialurònic + col·lagen. Efecte intensiu hidratant i reafirmant. S'aplica hidrolat d'aigua de roses al finalitzar.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">9</div>
+                  <div class="step-body">
+                    <strong>Crema Nutritiva</strong>
+                    <p>Ceramides i Vitamina E. Repara, nodreix i manté els resultats.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">10</div>
+                  <div class="step-body">
+                    <strong>Protector Solar SPF 50+</strong>
+                    <p>Filtres UVA/UVB d'ampli espectre, antioxidant amb filtre físic. Imprescindible.</p>
+                    <span class="step-tag step-tag--alert"><i class="fas fa-sun" aria-hidden="true"></i> Imprescindible</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-info-row">
+            <div class="protocol-sessions-card">
+              <i class="fas fa-calendar-days" aria-hidden="true"></i>
+              <div>
+                <strong>Sessions recomanades</strong>
+                <p>Mínim 6–12 sessions. Envelliment avançat fins a 12–15. Freqüència: 1–2 per setmana. Manteniment: 1 al mes.</p>
+              </div>
+            </div>
+            <div class="protocol-tips-card">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <div>
+                <strong>Rutina a casa</strong>
+                <ul>
+                  <li><strong>Matí:</strong> Netejador suau → Sèrum Vit. E → Crema → SPF 50</li>
+                  <li><strong>Nit:</strong> Neteja → Retinol/pèptids → Crema reafirmant</li>
+                  <li>Introduir el retinol de forma progressiva</li>
+                  <li>Reaplicar SPF cada 2–3 hores amb exposició solar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Pigmentació -->
+        <div class="protocol-tab-content" id="tabPigmentacio" role="tabpanel" aria-labelledby="tabBtnPigmentacio" hidden>
+          <div class="protocol-intro-grid">
+            <div class="protocol-need-box">
+              <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Objectius del tractament</h4>
+              <ul>
+                <li>Regular la producció de melanina</li>
+                <li>Unificar la tonalitat cutània i reduir taques</li>
+                <li>Estimular la renovació cel·lular</li>
+                <li>Alta fotoprotecció diària (imprescindible)</li>
+              </ul>
+            </div>
+            <div class="protocol-skin-box">
+              <h4><i class="fas fa-magnifying-glass" aria-hidden="true"></i> Tipus de pell</h4>
+              <p>Tonalitat desigual, presència de taques solars o melasma, possible pell sensibilitzada, textura irregular o deshidratació.</p>
+            </div>
+          </div>
+
+          <div class="protocol-steps">
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 1 · Preparació</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <strong>Desmaquillat</strong>
+                    <p>Llet desmaquillant amb Niacinamida (baixa concentració) i extracte de regalèssia (Glabridina). Acció despigmentant suau.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <strong>Hidrolat</strong>
+                    <p>Aigua de roses de damascena + flor de taronger (Azahar). Calma, neteja i prepara la pell per al tractament.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 2 · Tractament</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <strong>Peeling Despigmentant</strong>
+                    <p>Àcid glicòlic + àcid mandèlic. Renueva la pell, elimina cèl·lules mortes i redueix les taques.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <strong>Hidrolat Calmant</strong>
+                    <p>Aigues de rosa damascena i flor de taronger per calmar la pell post-peeling.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">5</div>
+                  <div class="step-body">
+                    <strong>Llum LED Verd + Groc + Vermell</strong>
+                    <p>Verd: actua directament sobre la pigmentació. Groc: redueix vermellors. Vermell: estimula regeneració i col·lagen.</p>
+                    <span class="step-tag"><i class="fas fa-bolt" aria-hidden="true"></i> Aparatologia</span>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">6</div>
+                  <div class="step-body">
+                    <strong>Sèrum Despigmentant</strong>
+                    <p>Àcid kòjic + àcid tranexàmic + àcid azelaic. Bloqueja la formació de melanina i aclareix la pell.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 3 · Finalització</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">7</div>
+                  <div class="step-body">
+                    <strong>Mascareta Arcilla + Niacinamida</strong>
+                    <p>Reforça el tractament, millora la lluminositat. S'aplica hidrolat d'aigua de roses al retirar.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">8</div>
+                  <div class="step-body">
+                    <strong>Crema Hidratant</strong>
+                    <p>Niacinamida i ceramides. Reforça la barrera cutània i manté el tractament.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">9</div>
+                  <div class="step-body">
+                    <strong>Protector Solar SPF 50+</strong>
+                    <p>Textura llet, filtres UVA/UVB ampli espectre amb filtre físic. Absolutament imprescindible en tractaments de pigmentació.</p>
+                    <span class="step-tag step-tag--alert"><i class="fas fa-sun" aria-hidden="true"></i> Obligatori</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-info-row">
+            <div class="protocol-sessions-card">
+              <i class="fas fa-calendar-days" aria-hidden="true"></i>
+              <div>
+                <strong>Sessions recomanades</strong>
+                <p>Mínim 6–10 sessions. Melasma o hiperpigmentació profunda fins a 10–12. Freqüència: cada 7–10 dies. Manteniment: 1 al mes.</p>
+              </div>
+            </div>
+            <div class="protocol-tips-card">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <div>
+                <strong>Rutina a casa</strong>
+                <ul>
+                  <li><strong>Matí:</strong> Netejador suau → Vit. C / Niacinamida → Crema → SPF 50</li>
+                  <li><strong>Nit:</strong> Netejador → Sèrum kòjic/arbutina → Crema reparadora</li>
+                  <li>Reaplicar SPF cada 2–3 hores amb exposició solar</li>
+                  <li>Evitar l'exposició solar directa post tractament</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORPORALS -->
+      <div class="protocol-panel" id="panelCorporals" hidden>
+        <div class="protocol-modal-header">
+          <span class="protocol-category-badge protocol-category-badge--sage"><i class="fas fa-leaf" aria-hidden="true"></i> Tractaments Corporals</span>
+          <h2 class="protocol-modal-title">Protocols de Tractaments Corporals</h2>
+          <p>Protocols especialitzats per tractar alteracions corporals i millorar la qualitat de la pell de forma progressiva.</p>
+        </div>
+
+        <!-- Tab Nav -->
+        <div class="protocol-tabs" role="tablist" aria-label="Protocols corporals">
+          <button class="protocol-tab active" role="tab" aria-selected="true" aria-controls="tabEstries" id="tabBtnEstries">
+            <i class="fas fa-wave-square" aria-hidden="true"></i> Antiestries
+          </button>
+          <button class="protocol-tab" role="tab" aria-selected="false" aria-controls="tabCellulitis" id="tabBtnCellulitis">
+            <i class="fas fa-circle-dot" aria-hidden="true"></i> Cel·lulitis
+          </button>
+        </div>
+
+        <!-- Tab: Antiestries -->
+        <div class="protocol-tab-content active" id="tabEstries" role="tabpanel" aria-labelledby="tabBtnEstries">
+          <div class="protocol-intro-grid">
+            <div class="protocol-need-box">
+              <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Objectius del tractament</h4>
+              <ul>
+                <li>Estimular el col·lagen i l'elastina</li>
+                <li>Hidratar profundament i regenerar el teixit</li>
+                <li>Millorar la microcirculació i l'elasticitat</li>
+                <li>Nodrir els lípids cutanis i protegir del dany solar</li>
+              </ul>
+            </div>
+            <div class="protocol-skin-box">
+              <h4><i class="fas fa-magnifying-glass" aria-hidden="true"></i> Estat de la pell</h4>
+              <div class="skin-state-tags">
+                <span class="skin-tag skin-tag--red">Estries vermelles (recents)</span>
+                <span class="skin-tag skin-tag--white">Estries blanques (antigues)</span>
+              </div>
+              <p class="skin-note">Les estries vermelles responen millor al tractament. Les blanques requereixen constància i gestió d'expectatives.</p>
+            </div>
+          </div>
+
+          <div class="protocol-steps">
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 1 · Preparació</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <strong>Higienització Corporal</strong>
+                    <p>Desmaquillant corporal amb glicerina i tensioactius suaus per una neteja respectuosa.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <strong>Tònic Activador</strong>
+                    <p>Rosa + Hamamelis per equilibrar la pell i preparar-la per als actius del tractament.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <strong>Exfoliant Enzimàtic</strong>
+                    <p>Àcid làctic + bromelina. Renueva la pell i elimina cèl·lules mortes afavorint la penetració dels actius.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 2 · Tractament</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <strong>Sèrum Reparador</strong>
+                    <p>Centella asiàtica + pèptids + oli de rosa mosqueta. Hidrata, millora l'elasticitat, regenera la pell danyada.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">5</div>
+                  <div class="step-body">
+                    <strong>Aparatologia (segons l'estat)</strong>
+                    <div class="aparatologia-grid">
+                      <div class="aparat-item"><i class="fas fa-syringe" aria-hidden="true"></i><span>Microneedling</span><small>Estimula col·lagen · regenera teixit</small></div>
+                      <div class="aparat-item"><i class="fas fa-bolt" aria-hidden="true"></i><span>Làser Fraccionat</span><small>Millora textura · redueix profunditat</small></div>
+                      <div class="aparat-item"><i class="fas fa-wave-square" aria-hidden="true"></i><span>Ultrasons</span><small>Potencia actius · activa microcirculació</small></div>
+                      <div class="aparat-item"><i class="fas fa-circle-arrow-up" aria-hidden="true"></i><span>Vacumteràpia</span><small>Estimula circulació · millora elasticitat</small></div>
+                    </div>
+                    <span class="step-note"><i class="fas fa-info-circle" aria-hidden="true"></i> S'utilitza el Microneedling com a tècnica principal per la seva capacitat regeneradora.</span>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">6</div>
+                  <div class="step-body">
+                    <strong>Mascareta Corporal d'Algues</strong>
+                    <p>Millora l'elasticitat, estimula la regeneració i hidrata en profunditat.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 3 · Finalització</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">7</div>
+                  <div class="step-body">
+                    <strong>Crema Hidratant Corporal</strong>
+                    <p>Mantega de karité + oli d'ametlles + rosa mosqueta per nutrir i mantenir la hidratació.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">8</div>
+                  <div class="step-body">
+                    <strong>Protector Solar Físic</strong>
+                    <p>Textura llet. Protegeix la pell tractada de la radiació solar per garantir els resultats.</p>
+                    <span class="step-tag step-tag--alert"><i class="fas fa-sun" aria-hidden="true"></i> Imprescindible</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-info-row">
+            <div class="protocol-sessions-card">
+              <i class="fas fa-calendar-days" aria-hidden="true"></i>
+              <div>
+                <strong>Sessions recomanades</strong>
+                <p>1–2 sessions per setmana. Mínim 6–10 sessions per a resultats visibles.</p>
+              </div>
+            </div>
+            <div class="protocol-tips-card">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <div>
+                <strong>Cures a casa</strong>
+                <ul>
+                  <li>Hidratació diària amb oli de rosa mosqueta</li>
+                  <li>Beure suficient aigua</li>
+                  <li>Evitar exposició solar directa a la zona tractada</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Cel·lulitis -->
+        <div class="protocol-tab-content" id="tabCellulitis" role="tabpanel" aria-labelledby="tabBtnCellulitis" hidden>
+          <div class="protocol-intro-grid">
+            <div class="protocol-need-box">
+              <h4><i class="fas fa-bullseye" aria-hidden="true"></i> Objectius del tractament</h4>
+              <ul>
+                <li>Millorar la microcirculació i afavorir el drenatge</li>
+                <li>Estimular el metabolisme del greix</li>
+                <li>Reafirmar el teixit i millorar la textura</li>
+              </ul>
+            </div>
+            <div class="protocol-skin-box">
+              <h4><i class="fas fa-magnifying-glass" aria-hidden="true"></i> Tipus de cel·lulitis</h4>
+              <div class="skin-state-tags">
+                <span class="skin-tag skin-tag--soft">Adiposa (tova) · acumulació de greix</span>
+                <span class="skin-tag skin-tag--water">Edematosa · retenció de líquids</span>
+                <span class="skin-tag skin-tag--hard">Fibrosa (dura) · teixit compacte</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-steps">
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 1 · Preparació</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">1</div>
+                  <div class="step-body">
+                    <strong>Higienització Corporal</strong>
+                    <p>Llet desmaquillant amb cafeïna i centella asiàtica per activar i preparar la pell.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">2</div>
+                  <div class="step-body">
+                    <strong>Tònic Activador</strong>
+                    <p>Mentol + Ginkgo biloba per calmar la pell i preparar-la per al tractament.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 2 · Tractament</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">3</div>
+                  <div class="step-body">
+                    <strong>Exfoliant de Gra de Cafè</strong>
+                    <p>Renueva la pell i elimina cèl·lules mortes. La cafeïna activa la circulació local.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">4</div>
+                  <div class="step-body">
+                    <strong>DLM (Drenatge Limfàtic Manual)</strong>
+                    <p>Tècnica manual per drenar la limfa, reduir i millorar l'aparença de la cel·lulitis.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">5</div>
+                  <div class="step-body">
+                    <strong>Oli Concentrat Actiu</strong>
+                    <p>L-carnitina + fucus algues + teofilina. Millora la circulació, drena i estimula la lipòlisi.</p>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">6</div>
+                  <div class="step-body">
+                    <strong>Maderoterapia</strong>
+                    <p>Trenca nòduls superficials, redueix tensió i ajuda a eliminar líquids retinguts.</p>
+                    <span class="step-tag"><i class="fas fa-bolt" aria-hidden="true"></i> Aparatologia</span>
+                  </div>
+                </div>
+                <div class="protocol-step">
+                  <div class="step-num">7</div>
+                  <div class="step-body">
+                    <strong>Embenat d'Algues</strong>
+                    <p>Alga laminària + escina + extracte de pebre. Millora la textura de la pell i la circulació venosa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="protocol-phase">
+              <div class="protocol-phase-label">Fase 3 · Finalització</div>
+              <div class="protocol-step-list">
+                <div class="protocol-step">
+                  <div class="step-num">8</div>
+                  <div class="step-body">
+                    <strong>Crema Anticel·lulítica</strong>
+                    <p>Teobromina + silici orgànic + ruscus per estimular la circulació, reduir l'inflor i els líquids retinguts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="protocol-note-box">
+            <i class="fas fa-circle-info" aria-hidden="true"></i>
+            <p><strong>Nota protocol:</strong> Només una sessió d'envoltura. Cavitació als dos dies del primer tractament. DLM + Maderoterapia 2 cops per setmana.</p>
+          </div>
+
+          <div class="protocol-info-row">
+            <div class="protocol-sessions-card">
+              <i class="fas fa-calendar-days" aria-hidden="true"></i>
+              <div>
+                <strong>Sessions recomanades</strong>
+                <p>8–12 sessions (cel·lulitis fibrosa pot requerir-ne més). Fase intensiva: 2/setmana. Manteniment: 1 cada 3–4 setmanes.</p>
+              </div>
+            </div>
+            <div class="protocol-tips-card">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <div>
+                <strong>Cures a casa</strong>
+                <ul>
+                  <li>Bona hidratació i alimentació baixa en sal i sucres</li>
+                  <li>Evitar roba molt ajustada</li>
+                  <li>Afavorir el drenatge: caminar, activitat suau</li>
+                  <li>Evitar alcohol i exposició a calor intensa post sessió</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">

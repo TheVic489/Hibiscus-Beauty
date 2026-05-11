@@ -183,4 +183,101 @@
 
   /* ---- Init ---- */
   onScroll();
+
+  /* --------------------------------------------------------
+     Protocol modal
+  -------------------------------------------------------- */
+  var protocolModal    = document.getElementById('protocolModal');
+  var protocolClose    = document.getElementById('protocolModalClose');
+  var protocolBackdrop = document.getElementById('protocolModalBackdrop');
+  var panelFacials     = document.getElementById('panelFacials');
+  var panelCorporals   = document.getElementById('panelCorporals');
+
+  function openProtocolModal(type) {
+    if (!protocolModal) return;
+    protocolModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+
+    if (type === 'facials') {
+      panelFacials.hidden  = false;
+      panelCorporals.hidden = true;
+    } else {
+      panelCorporals.hidden = false;
+      panelFacials.hidden   = true;
+    }
+
+    // Activate first tab in the shown panel
+    var activePanel = type === 'facials' ? panelFacials : panelCorporals;
+    var firstTab    = activePanel.querySelector('.protocol-tab');
+    if (firstTab) activateTab(firstTab, activePanel);
+
+    // Focus close button for accessibility
+    if (protocolClose) protocolClose.focus();
+  }
+
+  function closeProtocolModal() {
+    if (!protocolModal) return;
+    protocolModal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  function activateTab(tabBtn, panel) {
+    var tabs     = panel.querySelectorAll('.protocol-tab');
+    var contents = panel.querySelectorAll('.protocol-tab-content');
+
+    tabs.forEach(function (t) {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    contents.forEach(function (c) {
+      c.classList.remove('active');
+      c.hidden = true;
+    });
+
+    tabBtn.classList.add('active');
+    tabBtn.setAttribute('aria-selected', 'true');
+    var targetId = tabBtn.getAttribute('aria-controls');
+    var target   = document.getElementById(targetId);
+    if (target) {
+      target.classList.add('active');
+      target.hidden = false;
+    }
+  }
+
+  // Open buttons
+  document.querySelectorAll('.btn-protocol').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openProtocolModal(btn.getAttribute('data-protocol'));
+    });
+  });
+
+  // Close button
+  if (protocolClose) {
+    protocolClose.addEventListener('click', closeProtocolModal);
+  }
+
+  // Backdrop click
+  if (protocolBackdrop) {
+    protocolBackdrop.addEventListener('click', closeProtocolModal);
+  }
+
+  // ESC key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && protocolModal && !protocolModal.hidden) {
+      closeProtocolModal();
+    }
+  });
+
+  // Tab clicks (event delegation on each panel)
+  [panelFacials, panelCorporals].forEach(function (panel) {
+    if (!panel) return;
+    var tabList = panel.querySelector('.protocol-tabs');
+    if (!tabList) return;
+    tabList.addEventListener('click', function (e) {
+      var tab = e.target.closest('.protocol-tab');
+      if (!tab) return;
+      activateTab(tab, panel);
+    });
+  });
+
 }());
