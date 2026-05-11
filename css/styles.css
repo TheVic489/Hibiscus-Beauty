@@ -283,7 +283,8 @@ p { color: var(--medium); }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80')
+  /* background: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=80') */
+  background: url('/images/hero.jpeg')
               center center / cover no-repeat;
 }
 
@@ -1109,7 +1110,7 @@ p { color: var(--medium); }
 /* ---- FLOATING WHATSAPP ---- */
 .whatsapp-float {
   position: fixed;
-  bottom: 2rem;
+  bottom: 1.5rem;
   right: 2rem;
   z-index: 900;
   width: 56px;
