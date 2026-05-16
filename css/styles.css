@@ -1005,18 +1005,6 @@ p { color: var(--medium); }
   box-shadow: var(--shadow-sm);
 }
 
-/* ---- ARTICLES D'INTERÈS ---- */
-.articles {
-  line-height: 0;
-}
-
-.articles-hero-img {
-  width: 100%;
-  display: block;
-  object-fit: contain;
-  max-height: none;
-}
-
 /* ---- FOOTER ---- */
 .footer {
   background: var(--dark);
