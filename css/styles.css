@@ -1096,6 +1096,29 @@ p { color: var(--medium); }
 
 .footer-contact-info .btn-sm { margin-top: 1.1rem; }
 
+.footer-disclaimer {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-disclaimer h4 {
+  color: var(--white);
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: .9rem;
+}
+
+.footer-disclaimer p {
+  font-size: .82rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+  margin-bottom: .8rem;
+}
+
+.footer-disclaimer p:last-child { margin-bottom: 0; }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
